@@ -1,0 +1,11 @@
+<url id="${url.id}">
+	<dir>${url.dir}</dir>
+	<info>${info}</info>
+	<tags> 
+	#{list items:url.tags, as:'t'}
+		<tag>
+			${t.tag}
+		</tag>
+	#{/list}
+	</tags>
+</url>

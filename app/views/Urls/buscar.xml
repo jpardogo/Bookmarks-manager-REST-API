@@ -1,0 +1,11 @@
+<url dir="${url.dir}">
+	
+	<info>${info}</info>
+	<users> 
+	#{list items:url.users, as:'u'}
+		<user>
+			${u.nick}
+		</user>
+	#{/list}
+	</users>
+</url>

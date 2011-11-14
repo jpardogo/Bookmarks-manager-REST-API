@@ -1,0 +1,15 @@
+{
+	"id":"${user.id}",
+	"nick":"${user.nick}",
+	"email":"${user.email}",
+	"info": "${info}",
+	"urls": 
+	[
+	#{list items: user.urls, as:'url'}
+		{
+			"dir":"${url.dir}"
+			
+		}${url_isLast ? '' : ','}
+	#{/list}]
+}
+

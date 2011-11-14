@@ -1,0 +1,4 @@
+<user>
+	<nick>${u.nick}</nick>
+	<info>${info}</info>
+</user>

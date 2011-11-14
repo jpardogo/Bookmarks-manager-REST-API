@@ -1,0 +1,29 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       	Application.index
+GET    	/admin           							module:crud
+# Ignore favicon requests
+GET     /favicon.ico                            	404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                	staticDir:public
+
+# Catch all
+*   	/{controller}/{action}                     	{controller}.{action}
+POST    /{controller}/crear/json	               	{controller}.crear(format:'json')
+GET     /{controller}/buscar/{key}/json             {controller}.buscar(format:'json')
+PUT 	/Usuarios/actualizar/{id}/json              Usuarios.actualizar(format:'json')
+DELETE  /Usuarios/borrar/{nick}/json          		Usuarios.borrar(format:'json')
+DELETE  /Urls/borrar/{nick}/{dir}/json				Urls.borrar(format:'json')
+DELETE  /Tags/borrar/{tag}/{dir}/json				Tags.borrar(format:'json')
+
+POST    /{controller}/crear/xml	               		{controller}.crear(format:'xml')
+GET     /{controller}/buscar/{key}/xml             	{controller}.buscar(format:'xml')
+PUT 	/Usuarios/actualizar/{id}/xml             	Usuarios.actualizar(format:'xml')
+DELETE  /Usuarios/borrar/{nick}/xml          		Usuarios.borrar(format:'json')
+DELETE  /Urls/borrar/{nick}/{dir}/xml				Urls.borrar(format:'xml')
+DELETE  /Tags/borrar/{tag}/{dir}/xml				Tags.borrar(format:'xml')
+

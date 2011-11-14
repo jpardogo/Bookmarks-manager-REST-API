@@ -1,0 +1,14 @@
+{
+	"id":"${t.id}",
+	"tag":"${t.tag}",
+	"info": "${info}",
+	"tags": 
+	[
+	#{list items: t.urls, as:'url'}
+		{
+			"tag":"${url.dir}"
+			
+		}${url_isLast ? '' : ','}
+	#{/list}
+	]
+}

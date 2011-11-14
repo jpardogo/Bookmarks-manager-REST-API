@@ -1,0 +1,74 @@
+Usuario(usuario1):
+    nick:   nick1
+    email:  email1@email.com
+    urls:
+            - url1
+            - url2
+            - url3
+   
+Usuario(usuario2):
+   nick:    nick2
+   email:   email2@email.com
+   urls:
+            - url2
+
+Usuario(usuario2):
+   nick:  nick2
+   email: email2@email.com
+   urls:
+
+
+
+
+Tag(tag1):
+   tag:     tag1
+   urls:
+            - url1
+
+Tag(tag2):
+   tag:     tag2
+   urls:
+            - url1
+
+Tag(tag3):
+   tag:     tag3
+   urls:
+            - url1
+            - url2
+
+Tag(tag4):
+   tag:     tag4
+   urls:
+            - url4
+
+
+Url(url1):
+    dir:    http://www.web1.es
+    users:
+            - usuario1
+    tags:
+            - tag1
+            - tag2
+            - tag3
+
+Url(url2):
+    dir:    http://www.web2.es
+    users:
+            - usuario1
+            - usuario2
+    tags:
+            - tag3
+
+Url(url3):
+    dir:    http://www.web3.es
+    users:
+            - usuario1
+    tags:
+
+Url(url4):
+    dir:    http://www.web4.es
+    users:
+    tags:
+            - tag4
+   
+

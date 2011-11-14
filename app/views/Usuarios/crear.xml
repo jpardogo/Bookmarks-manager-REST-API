@@ -1,0 +1,12 @@
+<user id="${user.id}">
+	<nick>${user.nick}</nick>
+	<email>${user.email}</email>
+	<info>${info}</info>
+	<urls> 
+	#{list items:user.urls, as:'url'}
+		<url>
+			${url.dir}
+		</url>
+	#{/list}
+	</urls>
+</user>

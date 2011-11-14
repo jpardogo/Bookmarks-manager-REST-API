@@ -1,0 +1,11 @@
+<tag tag="${t.tag}">
+	
+	<info>${info}</info>
+	<urls> 
+	#{list items:t.urls, as:'url'}
+		<url>
+			${url.dir}
+		</url>
+	#{/list}
+	</urls>
+</tag>

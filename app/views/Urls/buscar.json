@@ -1,0 +1,23 @@
+{
+	"url":"${url.dir}",
+	"info": "${info}",
+	"usuarios": 
+	[
+	#{list items: url.users, as:'u'}
+		{
+			"nick":"${u.nick}"
+			
+		}${u_isLast ? '' : ','}
+	#{/list}],
+	
+	"tags":
+	[
+	#{list items: url.tags, as:'t'}
+		{
+			"tag":"${t.tag}"
+			
+		}${t_isLast ? '' : ','}
+	#{/list}]
+}
+
+
